@@ -1,0 +1,46 @@
+$frisky-yellow: #F6B932;
+$sloppy-grey: #B4B4B4;
+$main-blue: #1C0A90;
+$job-title-font: 'Roboto', sans-serif;
+$border-blue: #3927B1;
+
+.job-ticket {
+    border: 1px solid $border-blue;
+    .job-details {
+        .job-title {
+            text-transform: capitalize;
+            font-family: $job-title-font;
+        }
+        .job-progress-bar-rail {
+            width: 70%;
+            margin-bottom: 10px;
+            background-color: $frisky-yellow;
+            height: 4px;
+            position: relative;
+            border-radius: 4px;
+            .job-progress-bar {
+                position: absolute;
+                border-radius: 4px;
+                left: 0;
+                background-color: $main-blue;
+                height: 6px;
+                top: -1px;
+            }
+        }
+    }
+    .job-buttons {
+        .job-view-more {
+            color: #5A5A5A;
+        }
+        .job-button-login {
+            font-family: $job-title-font;
+            color: #fff;
+            background-color: $main-blue;
+            &:hover {
+                background-color: transparent;
+                color: $main-blue;
+                border: 1px solid $main-blue;
+            }
+        }
+    }
+}

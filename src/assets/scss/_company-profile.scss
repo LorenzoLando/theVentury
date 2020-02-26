@@ -1,0 +1,67 @@
+
+$company-name-font: 'Roboto', sans-serif;
+$company-body-label-font: 'Roboto', sans-serif;
+$company-jobs-font: 'Oswald', sans-serif;
+$frisky-yellow: #F6B932;
+$sloppy-grey: #B4B4B4;
+$main-blue: #1C0A90;
+
+.company-profile {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    .row {
+        margin: 0;
+    }
+    .company-header {
+        width: 100%;
+        height: 250px;
+        background-color: $main-blue;
+    }
+    .company-body {
+        display: flex;
+        flex-direction: row;
+        .left-column {
+            .company-avatar {
+                .margin-wrapper {
+                    position: relative;
+                    width: 100%;
+                }
+            }
+            .company-details {
+                .company-name {
+                    font-family: $company-name-font;
+                    color: $frisky-yellow;
+                }
+                padding-bottom: 20px;
+                border-bottom: 1px solid $sloppy-grey;
+            }
+
+            .company-summary {
+                .company-summary-label {
+                    color: $main-blue;
+                }
+            }
+
+            .company-stack {
+                .company-stack-label-label {
+                    color: $main-blue;
+                }
+            }
+
+        }
+
+        .right-column {
+            padding-left: 110px;
+            .company-active-jobs  {
+                font-family: $company-jobs-font;
+            }
+            .company-body-label {
+                font-family: $company-body-label-font;
+                color: $frisky-yellow;
+                width: 100%;
+            }
+        }
+    }
+
+}
