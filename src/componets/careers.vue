@@ -1,25 +1,7 @@
-# theventury
-
-> A Vue.js project
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-```
-
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
-
-
-
-    <div class="company-jobs row">
+<template>
+  <div>
+   <!-- <h1>{{jobTitle}}</h1>
+   <div class="company-jobs row">
 										<div class="company-active-jobs">Active Jobs</div>
 										<div class="row">
 											<span>
@@ -101,4 +83,20 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 												</div>
 											</span>
 										</div>
-									</div>
+									</div> -->
+    </div>
+</template>
+
+<script>
+export default {
+  data () {
+    return {
+      jobTitle: 'Front-end Developer'
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+
+</style>
