@@ -2,8 +2,8 @@
   <div>
     <body>
       <app-header></app-header>
-      <app-careers></app-careers>
       <app-about></app-about>
+      <app-careers></app-careers>
       <app-footer></app-footer>
     </body>
   </div>
@@ -37,6 +37,9 @@ export default {
 
 html {
   scroll-behavior: smooth;
+}
+body {
+  // background-color:  #adadad;
 }
 </style>
 

@@ -1,89 +1,24 @@
 <template>
-  <div>
-   <!-- <h1>{{jobTitle}}</h1>
-   <div class="company-jobs row">
-										<div class="company-active-jobs">Active Jobs</div>
-										<div class="row">
-											<span>
-												<div class="job-ticket">
-													<div class="avatar">
-														<img src="https://via.placeholder.com/120" />
-													</div>
-													<div class="job-details">
-														<a class="job-view-more" href="#">
-															<div class="job-title">frontend developer</div>
-														</a>
-														<a href="#">
-															<div class="job-subtitle">The Ventury</div>
-														</a>
-														<div class="job-progress-bar-rail">
-															<div
-																class="job-progress-bar"
-																style="width: 60%;"
-															></div>
-														</div>
-														<div class="job-description">
-															<span>html,</span>
-															<span>scss,</span>
-															<span>javascript,</span>
-															<span>jquery</span>
-														</div>
-													</div>
-													<div class="job-buttons">
-														<a href="#">
-															<button
-																type="button"
-																class="job-button-login btn btn-default"
-															>
-																Apply
-															</button>
-														</a>
-														<a class="job-view-more" href="#">More</a>
-													</div>
-												</div>
-											</span>
-										</div>
-
-										<div class="row">
-											<span>
-												<div class="job-ticket">
-													<div class="avatar">
-														<img src="https://via.placeholder.com/120" />
-													</div>
-													<div class="job-details">
-														<a class="job-view-more" href="#">
-															<div class="job-title">backend developer</div>
-														</a>
-														<a href="#">
-															<div class="job-subtitle">The Ventury</div>
-														</a>
-														<div class="job-progress-bar-rail">
-															<div
-																class="job-progress-bar"
-																style="width: 40%;"
-															></div>
-														</div>
-														<div class="job-description">
-															<span>NodeJS,</span>
-															<span>PHP,</span>
-															<span>Python</span>
-														</div>
-													</div>
-													<div class="job-buttons">
-														<a href="#">
-															<button
-																type="button"
-																class="job-button-login btn btn-default"
-															>
-																Apply
-															</button>
-														</a>
-														<a class="job-view-more" href="#">More</a>
-													</div>
-												</div>
-											</span>
-										</div>
-									</div> -->
+  <div id="careers" class="container">
+            <div class="row mb-2">
+              <div class="col-md-6" v-for="(job, index) in jobs" v-bind:key="index">
+                <div class="card flex-md-row mb-4 shadow-sm h-md-250">
+                  <div class="card-body d-flex flex-column align-items-start">
+                    <strong class="d-inline-block mb-2 text-primary"></strong>
+                    <h3 class="mb-0">
+                      <a class="" href="#">{{job.title}}</a>
+                    </h3>
+                    <div class="mb-1 text-muted">{{job.location}}</div>
+                    <p class="card-text mb-auto">{{job.description}}</p>
+                    <div class="checkbox" v-for="(skill, index) in job.skills" v-bind:key="index">
+                      <label><input type="checkbox" value="" checked>{{skill}}</label>
+                    </div>
+                    <a href="#">Continue reading</a>
+                  </div>
+                  <img class="card-img-right flex-auto d-none d-lg-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" style="width: 200px; height: 250px;" v-bind:src="job.img" data-holder-rendered="true">
+                </div>
+              </div>
+            </div>
     </div>
 </template>
 
@@ -91,12 +26,60 @@
 export default {
   data () {
     return {
-      jobTitle: 'Front-end Developer'
+      jobs: [
+        {
+          title: "Front-end Developer",
+          location: 'New York',
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu ultrices vitae auctor eu augue ut lectus arcu. Sit amet commodo nulla facilisi. Cursus mattis molestie a iaculis. Senectus et netus et malesuada. Arcu non odio euismod lacinia at quis risus sed vulputate. Viverra nam libero justo laoreet sit amet cursus sit. Et sollicitudin ac orci phasellus egestas tellus rutrum tellus. Odio eu feugiat pretium nibh ipsum consequat nisl vel. Aliquet sagittis id consectetur purus ut faucibus pulvinar elementum integer.",
+          img: 'src/assets/images/front.jpg',
+          skills: ['Javascript', 'CSS', 'Vue.js']
+        },
+         {
+          title: "Back-end Developer",
+          location: 'Wien',
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu ultrices vitae auctor eu augue ut lectus arcu. Sit amet commodo nulla facilisi. Cursus mattis molestie a iaculis. Senectus et netus et malesuada. Arcu non odio euismod lacinia at quis risus sed vulputate. Viverra nam libero justo laoreet sit amet cursus sit. Et sollicitudin ac orci phasellus egestas tellus rutrum tellus. Odio eu feugiat pretium nibh ipsum consequat nisl vel. Aliquet sagittis id consectetur purus ut faucibus pulvinar elementum integer.",
+          img: 'src/assets/images/back.jpg',
+          skills: ['Python','Node.js','SQL']
+        }
+      ]
     }
-  }
+  } 
 }
 </script>
 
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+$text-color: #8b3e6e;
+.card {
+  
+  border-radius: 10%;
+  -webkit-box-shadow: -4px 14px 5px -8px rgba(0,0,0,0.75);
+  -moz-box-shadow: -4px 14px 5px -8px rgba(0,0,0,0.75);
+  box-shadow: -4px 14px 5px -8px rgba(0,0,0,0.75);
+  background-color: #f8f9fa;
+  margin: 1rem;
+  color: $text-color;
+}
+
+
+.card-text {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card img {
+  //height: 60%;
+  border-radius: 0 10% 10% 0;
+ 
+}
+
+a {
+  text-decoration: none;
+  color: $text-color;
+}
+
 
 </style>

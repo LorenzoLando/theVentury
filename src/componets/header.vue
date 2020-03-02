@@ -95,5 +95,9 @@ export default {
             text-shadow:rgba(0, 0, 0, 0.01) 0px 0px 1px;
             text-size-adjust:100%;
       }
+
+      .nav-link {
+        text-decoration: underline;
+      } 
     
 </style>
