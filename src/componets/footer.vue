@@ -2,7 +2,7 @@
   <div>
     <img class="lazy loaded" id="footer-astronaut" src="https://theventury.com/wp-content/uploads/2019/11/footer_1920.png" data-src="https://theventury.com/wp-content/uploads/2019/11/footer_1920.png" data-was-processed="true">
    <!-- Footer -->
-<footer id="footer" class="page-footer font-small mdb-color lighten-3 pt-4">
+    <footer id="footer" class="page-footer font-small mdb-color lighten-3 pt-4">
   <!-- Footer Links -->
       <div class="container text-center text-md-left">
       <!-- Grid row -->
